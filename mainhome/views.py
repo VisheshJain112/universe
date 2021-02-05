@@ -5,7 +5,7 @@ from pathlib import Path
 import os
 
 # Create your views here.
-def mainhome(request):
+def index_home(request):
     
 
     if request.method == 'POST':
@@ -36,4 +36,7 @@ def mainhome(request):
             fd_img.close()
         """
         cont = content.objects.all()
-        return render(request,"homepage.html" , {'cont':cont})
+        return render(request,"index_home.html" , {'cont':cont})
+def mainhome(request):
+    cont = content.objects.all()
+    return render(request,"homepage.html" , {'cont':cont})
