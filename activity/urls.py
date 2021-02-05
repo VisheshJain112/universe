@@ -7,7 +7,7 @@ urlpatterns = [
     path('watchsunset', views.watchsunset, name="watchsunset"),
     path('watchgallery', views.watchgallery, name="watchgallery"),
     path('playbedroom', views.playbedroom, name="playbedroom"),
-    path('readbook', views.readbook, name="readbook"),
+    path('readletters', views.readletters, name="readletters"),
     path('playmusic', views.playmusic, name="playmusic"),
 
 ]

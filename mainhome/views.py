@@ -43,7 +43,7 @@ def mainhome(request):
 
 def ver(request):
     if request.method == "POST":
-        if str(request.POST.get('email')) == "a" and str(request.POST.get('password')) == "a":
+        if str(request.POST.get('email')) == "vivzisthebest" and str(request.POST.get('password')) == "vivzlovesmemore":
             messages.info(request, 'Welcome Paps')
             return redirect('world/homescreen')
         else:

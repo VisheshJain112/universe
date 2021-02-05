@@ -35,14 +35,14 @@ def playbedroom(request):
             pass
     else:
         return render(request,'playbedroom.html')
-def readbook(request):
+def readletters(request):
     if request.method == "POST":
         if request.POST.get("home") is not None:
                 return redirect('/world/homescreen')
         else:
             pass
     else:
-        return render(request,'readbook.html')
+        return render(request,'readletters.html')
 def playmusic(request):
     if request.method == "POST":
         if request.POST.get("home") is not None:
