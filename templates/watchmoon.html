@@ -6,8 +6,14 @@
   <title>Watch Moon</title>
   <link rel="stylesheet" href="{% static 'watchmoon/style.css' %}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="{% static 'btn_ani/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+  <!-- Add font awesome icons to buttons  -->
+  <form method="POST">
+    {% csrf_token %}
+  <button type="submit" name="home" value="home" class="btn"><i class="fa fa-home"></i></button>
+</form>
 </head>
 <body>
 <!-- partial:index.partial.html -->

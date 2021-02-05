@@ -6,12 +6,18 @@
   <title>SunRise</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="{% static 'watchsunset/style.css' %}">
+<link rel="stylesheet" href="{% static 'btn_ani/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons to buttons  -->
 
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
+
 <div class="landscape">
+
 
 
 
@@ -60,7 +66,10 @@
     <div class="reed reed-1"></div>
   </div>
 </div>
-
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit" name="home" value="home" class="btn"><i class="fa fa-home"></i></button>
+</form>
 <!-- partial -->
 
 </body>
