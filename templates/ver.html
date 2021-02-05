@@ -18,15 +18,21 @@
 </head>
 <body>
     <div id="logo"> 
+      
         <img src="{% static 'mainhome/assets/img/logo.png' %}" alt="World">
       </div>
+      <div>
     <div class="main-container">
+      
+      
         <img id="login-img" src="https://i.pinimg.com/564x/0d/a6/95/0da695ae9c48a2ff0e995304ba6005c5.jpg" alt="Main Logo">
+       
         <form id="login-form" method="POST" action="">
             {% csrf_token %}
             <div class="form-group">
                 <input type="name" class="form-control login-input" name="email" placeholder="Username">
             </div>
+            
             <div class="form-group">
                 <input type="password" class="form-control login-input login-password" name="password" placeholder="Password">
             </div>
@@ -38,9 +44,13 @@
             <p><center><mark>{{message}}</mark></center></p> 
             {% endfor %}
         </div>
+        
     </div>
+  </div>
+   
 </body>
 </html>
+
 <!-- partial -->
   <script  src="{% static 'ver/script.js' %}"></script>
 
