@@ -70,7 +70,7 @@ html, body {
     }
     
     .boton:hover .twist:before {
-        background: #0883ff;
+        background: #afc4c0;
         transform: matrix3d(1, 0, 0, 0, 
                             0, 1, 0, 0, 
                             0, 0, 1, 0.003, 
@@ -78,7 +78,7 @@ html, body {
     }
     
     .boton:hover .twist:after {
-        background: #0883ff;
+        background: #afc4c0;
         transform: matrix3d(1, 0, 0, 0, 
                             0, 0, -1, 0.003, 
                             0, 1, 0, 0, 
