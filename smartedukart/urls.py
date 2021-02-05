@@ -21,12 +21,7 @@ urlpatterns = [
     path('',include('mainhome.urls')),
     path('admin/', admin.site.urls),
     path('accounts/',include('accounts.urls')),
-    path('terms/',include('terms.urls')),
-    path('index/',include('index.urls')),
-    path('storykey/', include('storykey.urls')),
-    path('userinput/', include('userinput.urls')),
-    path('useroptions/', include('useroptions.urls')),
-    path('user_ui/', include('user_ui.urls')),
+    path('world/',include('world.urls')),
     path('feedback/', include('feedback.urls'))
     
     

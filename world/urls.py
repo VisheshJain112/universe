@@ -2,5 +2,6 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('terms', views.terms, name="terms"),
+    path('homescreen', views.homescreen, name="homescreen"),
+
 ]

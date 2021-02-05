@@ -20,13 +20,14 @@
     <div class="main-container">
         <img id="login-img" src="https://i.pinimg.com/564x/0d/a6/95/0da695ae9c48a2ff0e995304ba6005c5.jpg" alt="Main Logo">
         <form id="login-form" method="POST" action="">
+            {% csrf_token %}
             <div class="form-group">
-                <input type="email" class="form-control login-input" name="email" placeholder="Username">
+                <input type="name" class="form-control login-input" name="email" placeholder="Username">
             </div>
             <div class="form-group">
                 <input type="password" class="form-control login-input login-password" name="password" placeholder="Password">
             </div>
-            <button class="btn btn-primary login-btn">Log In</button>
+            <button name="login_ver" class="btn btn-primary login-btn">Log In</button>
         </form>
         <div>
             {% for message in messages %}

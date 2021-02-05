@@ -45,7 +45,7 @@ def ver(request):
     if request.method == "POST":
         if str(request.POST.get('email')) == "a" and str(request.POST.get('password')) == "a":
             messages.info(request, 'Welcome Paps')
-            return redirect('homepage')
+            return redirect('world/homescreen')
         else:
             messages.info(request, 'Wrong Key - Paps it may be just a typo \n \n \n but we have to make sure its you')
             return redirect('ver')
@@ -57,7 +57,7 @@ def pin(request):
     if request.method == "POST":
         if str(request.POST.get('digits')) == "0112":
             cont = content.objects.all()
-            messages.info(request, 'Welcome Paps')
+
             return redirect('ver')
 
         else:
