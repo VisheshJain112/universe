@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'index/style.css' %}">
+<link rel="stylesheet" href="{% static 'index_but_ani/style.css' %}">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'><link rel="stylesheet" href="{% static 'index/instructions_css.css' %}">
+
+
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+<div class="slider-container">
+  <div class="left-slide">
+    <div style="background-color: #b99f8a">
+      <h1>Instructions</h1>
+      <p>Fourth Step</p>
+    </div>
+    <div style="background-color: #354f32">
+      <h1>Instructions</h1>
+      <p>Third Step</p>
+    </div>
+    <div style="background-color: #657e85">
+      <h1>Instructions</h1>
+      <p>Second Step</p>
+    </div>
+    <div style="background-color: #2b2e32">
+      <h1>Instructions</h1>
+      <p>First Step</p>
+    </div>
+  </div>
+  <div class="right-slide">
+    <div
+      style="
+        background-image: url({% static 'index/predictive3.png' %});
+      "
+    ></div>
+    <div
+      style="
+        background-image: url({% static 'index/predictive3.png' %});
+      "
+    ></div>
+    <div
+      style="
+        background-image: url({% static 'index/predictive3.png' %});
+      "
+    ></div>
+    <div
+      style="
+        background-image: url({% static 'index/predictive3.png' %});
+      "
+    ></div>
+  </div>
+  <div class="action-buttons">
+    <button class="down-button">
+      <i class="fas fa-arrow-down"></i>
+    </button>
+    <button class="up-button">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</div>
+<!-- partial:index.partial.html -->
+
+
+<!-- Flex Container -->
+
+  <div class="container">
+    <div class="codrops-links">
+        
+    </div>
+    
+  </header>
+  
+  <section class="content">
+
+    <div class="box bg-1">
+    <h1>Index <span> Case&amp; Numbers</span></h1>
+    <header class="codrops-header">
+    
+  
+
+
+  <form method="post">
+  {% csrf_token %}
+
+  {% for case in case_num %}
+  
+
+     
+
+      <button name={{case}} value={{case}} class="button button--winona button--border-thin button--round-s" data-text="Open {{case}} case"><span>{{case}}</span></button>
+
+
+
+
+  
+
+  
+
+
+  
+    
+
+  
+    
+    
+
+
+
+
+  
+  
+  {% endfor %}
+</div>
+    
+</section>
+</div>
+  </form>
+  
+
+
+  <!-- End Container -->
+</div>
+<!-- partial -->
+  <script  src="{% static 'index/instructions_js.js' %}"></script>
+  <script  src="{% static 'index/script.js' %}"></script>
+
+</body>
+</html>

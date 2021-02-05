@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' href='https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css'>
+  <link rel="stylesheet" href="{% static 'storykey/style.css' %}">
+  <link rel="stylesheet" href="{% static 'storykey/button_style.css' %}">
+  <link rel="stylesheet" href="{% static 'user_options/style.css' %}">
+  <link rel="stylesheet" href="{% static 'user_input/style.css' %}">
+  <link rel="stylesheet" href="{% static 'list2/header_style.css' %}">
+  <link rel="stylesheet" href="{% static 'home_but/home.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div id="content">
+		<form method="post">
+			{% csrf_token %}
+		<button type="submit" name="close" value="close"  class="btn"><i class="fa fa-close"></i></button>
+		</form>
+		
+	
+		
+	</div>
+	<div id="content1">
+		<form method="post">
+			{% csrf_token %}
+		
+		<button type="submit" name="home" value="home"  class="btn"><i class="fa fa-home"></i></button>
+	</form>
+	
+		
+	</div>
+	<div id="content2">
+		<form method="post">
+			{% csrf_token %}
+		
+		<button type="submit" name="menu" value="menu" class="btn"><i class="fa fa-bars"></i></button>
+	</form>
+	</div>
+  <div class="dropdown">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+	<div class="flex text-gray-800 min-h-screen">
+
+		<main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
+	
+		  <section class="p-6 sm:p-8 flex items-center bg-indigo-700 shadow-md rounded-lg">
+			<div class="mr-6">
+			  <header class="text-xl text-indigo-50 mb-3">CASE NUMBER : {{request.session.casenum}}</header>
+			  <div class="sm:max-w-md text-indigo-300 leading-tight mb-5">
+				NAME : {{user_dict.name}}<br>
+				AGE : {{user_dict.age}}<br>
+				GENDER : {{user_dict.gender}}<br> 
+				ETHNICITY : {{user_dict.ethnicity}}<br>
+				MAIN ISSUES : {{user_dict.issues}}<br>
+			  </div>
+	  
+			</div>
+			<div class="hidden sm:block mr-0 ml-auto md:mr-8">
+			  <div class="h-32 w-32 flex items-center justify-center text-3xl text-white font-semibold border-4 border-white rounded-full">
+				3%
+			  </div>
+	
+	
+			</div>
+		  </section>
+
+
+		<div class="header">
+			<span class="snake1"></span>
+			<span class="snake2"></span>
+			  
+			<div class="inner_header">
+			  <div class="logo_container">
+				<h1>What's Your <span>Predictions?</span></h1>
+			  </div>
+
+			</div>
+      </div>
+      
+
+<!-- partial:index.partial.html -->
+<div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h2 id="question">Question is loading...</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text">Answer...</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text">Answer...</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="c" class="answer" />
+            <label for="c" id="c_text">Answer...</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="d" class="answer" />
+            <label for="d" id="d_text">Answer...</label>
+          </li>
+        </ul>
+      </div>
+      <button id="submit">Submit</button>
+    </div>
+  </div>
+</div>
+</main>
+
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static 'storykey/button_script.js' %}"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="{% static 'user_input/script.js' %}"></script>
+    
+<!-- partial -->
+  <script  src="{% static 'user_options/script.js' %}"></script>
+
+</body>
+</html>

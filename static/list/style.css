@@ -1,0 +1,55 @@
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+.container h1 {
+  font-weight: normal;
+}
+
+ol {
+  counter-reset: li;
+  /* Initiate a counter */
+  list-style: none;
+  /* Remove default numbering */
+  font: 15px Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+ol ol {
+  margin: 0 0 0 2rem;
+  /* Add some left margin for inner lists */
+}
+
+li span {
+  position: relative;
+  display: block;
+  padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+  margin: 0.5rem 0 0.5rem 2.5rem;
+  background-color: #f1f1f1;
+  color: #444;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+li span::before {
+  content: counters(li, ".");
+  counter-increment: li;
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  margin-top: -1rem;
+  background: #8c7ae6;
+  color: white;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+li li span::before {
+  left: -3rem;
+  width: 2.5rem;
+}
+li li li span::before {
+  left: -3.5rem;
+  width: 3rem;
+}

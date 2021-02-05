@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Nested Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="{% static 'list1/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h3>Nested Tables <small class="text-muted">with tree view-like connecting lines</small></h3>
+
+<br>
+<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+			<th>Header</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="tr-detail" class="tr-detail hidden">
+			<td></td>
+			<td colspan="4">
+				<div class="detail-content">
+					<ul>
+						<li>
+							<div class="detail"></div>
+
+							<div class="detail detail-main">
+								<fieldset>
+									<legend><span class="label label-primary">Nested Data</span></legend>
+									<div>
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</fieldset>
+								<!-- 								<div class="panel panel-default">
+								<div class="panel-heading">Nested Data</div>
+									<div class="panel-body">
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</div> -->
+
+							</div>
+						</li>
+						<li>
+							<div class="detail"></div>
+
+							<div class="detail detail-main">
+								<fieldset>
+									<legend><span class="label label-primary">Nested Data</span></legend>
+									<div>
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</fieldset>
+								<!-- 								<div class="panel panel-default">
+								<div class="panel-heading">Nested Data</div>
+									<div class="panel-body">
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</div> -->
+
+							</div>
+						</li>
+						<li>
+							<div class="detail"></div>
+
+							<div class="detail detail-main">
+								<fieldset>
+									<legend><span class="label label-primary">Nested Data</span></legend>
+									<div>
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</fieldset>
+								<!-- 								<div class="panel panel-default">
+								<div class="panel-heading">Nested Data</div>
+									<div class="panel-body">
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+													<th>Header</th>
+												</tr>
+											</thead>
+											<tr>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+												<td>123</td>
+											</tr>
+										</table>
+									</div>
+								</div> -->
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-chevron-right fa-fw"></span> </td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-chevron-right fa-fw"></span> </span>
+			</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-chevron-right fa-fw"></span> </span>
+			</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-chevron-right fa-fw"></span> </span>
+			</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+		<tr>
+			<td><span class="fa fa-chevron-right fa-fw"></span> </span>
+			</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+			<td>Data</td>
+		</tr>
+	</tbody>
+</table>
+<!-- <br>
+<div class="row">
+	<div class="col-xs-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Header</th>
+					<th>Header</th>
+					<th>Header</th>
+					<th>Header</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><i class="fa fa-chevron-right fa-fw"></i></td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+				<tr class="hidden">
+					<td colspan="5">
+						<div class="collapse">
+							<div style="white-space:pre-wrap">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam augue vitae ultrices porttitor. Nulla accumsan lacus eget tempor tristique. Cras nisl metus, maximus sed malesuada ut, ornare eleifend dolor. Nullam fringilla magna at ultrices facilisis.
+								Praesent sit amet enim ut ligula porttitor vulputate. Phasellus tortor orci, egestas a magna laoreet, dignissim mollis tellus. Cras mattis augue eu venenatis dignissim. Vivamus ut viverra leo. Quisque sollicitudin elit sed leo euismod, dignissim
+								ultricies lectus tincidunt. Sed a vestibulum felis. Aliquam a efficitur nulla. Curabitur et tellus finibus, tempus augue non, ultrices urna.
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="hidden">
+					<tr>
+						<td><i class="fa fa-chevron-right fa-fw"></i></td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+					<td colspan="5">
+						<div class="collapse">
+							<div style="white-space:pre-wrap">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam augue vitae ultrices porttitor. Nulla accumsan lacus eget tempor tristique. Cras nisl metus, maximus sed malesuada ut, ornare eleifend dolor. Nullam fringilla magna at ultrices facilisis.
+								Praesent sit amet enim ut ligula porttitor vulputate. Phasellus tortor orci, egestas a magna laoreet, dignissim mollis tellus. Cras mattis augue eu venenatis dignissim. Vivamus ut viverra leo. Quisque sollicitudin elit sed leo euismod, dignissim
+								ultricies lectus tincidunt. Sed a vestibulum felis. Aliquam a efficitur nulla. Curabitur et tellus finibus, tempus augue non, ultrices urna.
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div> -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="{% static 'list1/script.js' %}"></script>
+
+</body>
+</html>

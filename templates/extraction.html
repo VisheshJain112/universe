@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Story Extraction</title>
+  <link rel='stylesheet' href='https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css'>
+  <link rel="stylesheet" href="{% static 'extraction/style.css' %}">
+  <meta name="viewport" content="width=device-width"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'storykey/button_style.css' %}">
+  <link rel="stylesheet" href="{% static 'home_but/home.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    #my_centered_buttons { display: flex; justify-content: center; }
+    </style>
+
+</head>
+
+<body>
+
+<!-- partial:index.partial.html -->
+<style>
+  .center {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 200px;
+    border: 3px solid rgb(255, 255, 255); 
+  }
+</style>
+
+    <main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
+
+      <section class="p-6 sm:p-8 flex items-center bg-indigo-700 shadow-md rounded-lg">
+        <div class="mr-6">
+          <header class="text-xl text-indigo-50 mb-3">CASE NUMBER : {{request.session.casenum}}</header>
+          <div class="sm:max-w-md text-indigo-300 leading-tight mb-5">
+            NAME : {{user_dict.name}}<br>
+            AGE : {{user_dict.age}}<br>
+            GENDER : {{user_dict.gender}}<br> 
+            ETHNICITY : {{user_dict.ethnicity}}<br>
+            MAIN ISSUES : {{user_dict.issues}}<br>
+          </div>
+  
+        </div>
+        <div class="hidden sm:block mr-0 ml-auto md:mr-8">
+          <div class="h-32 w-32 flex items-center justify-center text-3xl text-white font-semibold border-4 border-white rounded-full">
+            3%
+          </div>
+
+
+        </div>
+      </section>
+    
+      <section>
+        <div class="flex justify-between items-center mb-6">
+          <header class="text-xl font-semibold">Case Summary </header>
+          <a href="#" class="hidden sm:flex flex-shrink-0 items-center text-lg font-medium text-gray-500">
+         
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 ml-1 mt-1">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="flex sm:hidden flex-shrink-0 items-center text-lg font-medium text-gray-500">
+            More
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 ml-1 mt-1">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
+          <div class="ocrloader">
+            
+              <div>
+                <div class="text-lg font-family-monospace">
+                {{story}}
+              </div>
+              </div>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+ 
+ 
+
+      <form method="post">
+        {% csrf_token %}
+        <div class="center">
+
+      <button type="submit" name="next" value="next" class="boton">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Next</button>
+
+      </form>
+    </div>
+
+
+</main>
+</div>
+</div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static 'storykey/button_script.js' %}"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>

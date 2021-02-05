@@ -1,0 +1,37 @@
+.btn {
+  background-color: rgb(255, 255, 255); /* Blue background */
+  border: rgb(81, 69, 205); /* Remove borders */
+  color: rgb(81, 69, 205); /* White text */
+  padding: 16px 18px; /* Some padding */
+  font-size: 24px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(71, 115, 248);
+}
+#content {
+    position: relative;
+}
+#content button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#content1 {
+    position: relative;
+}
+#content1 button {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+}
+#content2 {
+    position: relative;
+}
+#content2 button {
+    position: absolute;
+    top: 0px;
+    right: 120px;
+}

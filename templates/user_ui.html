@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css'>
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'user_ui/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'user_ui/css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'home_but/home.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div id="content">
+		<form method="post">
+			{% csrf_token %}
+		<button type="submit" name="close" value="close"  class="btn"><i class="fa fa-close"></i></button>
+		</form>
+		
+	
+		
+	</div>
+	<div id="content1">
+		<form method="post">
+			{% csrf_token %}
+		
+		<button type="submit" name="home" value="home"  class="btn"><i class="fa fa-home"></i></button>
+	</form>
+	
+		
+	</div>
+	<div id="content2">
+		<form method="post">
+			{% csrf_token %}
+		
+		<button type="submit" name="menu" value="menu" class="btn"><i class="fa fa-bars"></i></button>
+	</form>
+	</div>
+	<div class="flex text-gray-800 min-h-screen">
+
+		<main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
+	
+		  <section class="p-6 sm:p-8 flex items-center bg-indigo-700 shadow-md rounded-lg">
+			<div class="mr-6">
+			  <header class="text-xl text-indigo-50 mb-3">CASE NUMBER : {{request.session.casenum}}</header>
+			  <div class="sm:max-w-md text-indigo-300 leading-tight mb-5">
+				NAME : {{user_dict.name}}<br>
+				AGE : {{user_dict.age}}<br>
+				GENDER : {{user_dict.gender}}<br> 
+				ETHNICITY : {{user_dict.ethnicity}}<br>
+				MAIN ISSUES : {{user_dict.issues}}<br>
+			  </div>
+	  
+			</div>
+			<div class="hidden sm:block mr-0 ml-auto md:mr-8">
+			  <div class="h-32 w-32 flex items-center justify-center text-3xl text-white font-semibold border-4 border-white rounded-full">
+				3%
+			  </div>
+	
+	
+			</section>
+		
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post">
+				{% csrf_token %}
+				<span class="contact100-form-title">
+					Your Top 3 Predictions?
+				</span>
+
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Your Top 1st Prediction?</span>
+					<div>
+						<select class="selection-2" name="pred_1">
+							{% for choice in pred_1 %}
+							<option>{{choice}}</option>
+							{% endfor %}
+					
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Your Top 2nd Prediction?</span>
+					<div>
+						<select class="selection-2" name="pred_2">
+							{% for choice in pred_2 %}
+							<option>{{choice}}</option>
+							{% endfor %}
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Your Top 3rd Prediction?</span>
+					<div>
+						<select class="selection-2" name="pred_3">
+							{% for choice in pred_3 %}
+							<option>{{choice}}</option>
+							{% endfor %}
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+			
+				
+					</div>
+				
+		
+
+	
+
+	<div class="wrap-contact100">
+		
+			<span class="contact100-form-title">
+				Your Top 3 Reccommendations?
+			</span>
+
+
+			<div class="wrap-input100 input100-select">
+				<span class="label-input100">Your Top 1st Reccommendations?</span>
+				<div>
+					<select class="selection-2" name="recom_1">
+						{% for choice in recom_1 %}
+						<option>{{choice}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<span class="focus-input100"></span>
+			</div>
+
+			<div class="wrap-input100 input100-select">
+				<span class="label-input100">Your Top 2nd Reccommendations?</span>
+				<div>
+					<select class="selection-2" name="recom_2">
+						{% for choice in recom_2 %}
+						<option>{{choice}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<span class="focus-input100"></span>
+			</div>
+			<div class="wrap-input100 input100-select">
+				<span class="label-input100">Your Top 3rd Reccommendations?</span>
+				<div>
+					<select class="selection-2" name="recom_3">
+						{% for choice in recom_3 %}
+						<option>{{choice}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<span class="focus-input100"></span>
+			</div>
+		
+
+			<div class="container-contact100-form-btn">
+				<div class="wrap-contact100-form-btn">
+					<div class="contact100-form-bgbtn"></div>
+					
+		
+					
+					<button type="submit" name="submit" value="submit"class="contact100-form-btn">Submit & View AI Predictions
+						<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+					</button>
+			
+							
+				
+					
+				
+				</div>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+ 
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'user_ui/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/select2/select2.min.js' %}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'user_ui/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'user_ui/js/main.js' %}"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>

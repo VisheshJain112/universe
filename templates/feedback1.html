@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mavo/0.2.0/mavo.min.css'><link rel="stylesheet" href="{% static 'feedback/style.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel='stylesheet' href='https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css'>
+<link rel="stylesheet" href="{% static 'storykey/button_style.css' %}">
+<link rel="stylesheet" href="{% static 'home_but/home.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="content">
+	<form method="post">
+		{% csrf_token %}
+	<button type="submit" name="close" value="close"  class="btn"><i class="fa fa-close"></i></button>
+	</form>
+	
+
+	
+</div>
+<div id="content1">
+	<form method="post">
+		{% csrf_token %}
+	
+	<button type="submit" name="home" value="home"  class="btn"><i class="fa fa-home"></i></button>
+</form>
+
+	
+</div>
+<div id="content2">
+	<form method="post">
+		{% csrf_token %}
+	
+	<button type="submit" name="menu" value="menu" class="btn"><i class="fa fa-bars"></i></button>
+</form>
+</div>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Credit: Form Design is inspired by Aswin Madhulal (https://dribbble.com/shots/7209761-Feedback-much-appreciated) -->
+
+<div class="flex text-gray-800 min-h-screen">
+
+    <main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
+
+      <section class="p-6 sm:p-8 flex items-center bg-indigo-700 shadow-md rounded-lg">
+        <div class="mr-6">
+          <header class="text-xl text-indigo-50 mb-3"><p>CASE NUMBER : {{request.session.casenum}}</p></header>
+          <div class="sm:max-w-md text-indigo-300 leading-tight mb-5">
+            NAME : {{user_dict.name}}<br>
+            AGE : {{user_dict.age}}<br>
+            GENDER : {{user_dict.gender}}<br> 
+            ETHNICITY : {{user_dict.ethnicity}}<br>
+            MAIN ISSUES : {{user_dict.issues}}<br>
+          </div>
+  
+        </div>
+        <div class="hidden sm:block mr-0 ml-auto md:mr-8">
+          <div class="h-32 w-32 flex items-center justify-center text-3xl text-white font-semibold border-4 border-white rounded-full">
+            3%
+          </div>
+
+
+		</div>
+	  </section>
+<div class="content">
+	<header>
+		<h1>Feel free to drop us your feedback.</h1>
+		<!-- 	Credit: https://undraw.co/ -->
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/feedback-form-template.svg"
+			  alt="A woman is sitting on the floor and working on a laptop (vector illustration)" />
+	</header>
+	<main mv-app="feedbackForm"
+			mv-storage="#data"
+			mv-source="#source"
+			mv-mode="read">
+		<form mv-multiple="feedback" method="post">
+			<label>
+				<h2>
+					How satisfied are you overall with the support of our Predictions and Support?
+				</h2>
+				
+				<div class="tickmarks">
+					<span mv-multiple="tickmark"
+							mv-value="0 .. 10"
+							mv-storage="none"
+							class="[if($this = score, highlight)]"
+							mv-action="set(score, $this)"></span>
+				</div>
+				
+				<input property="score"
+						 type="range" max="10"
+						 style="--score: [score * 10]%" />
+				
+				<div class="legend">
+					<span mv-action="set(score, 0)">
+						Not at all likely
+					</span>
+					<span mv-action="set(score, 10)">
+						Extremely likely
+					</span>
+				</div>
+			</label>
+			
+			<textarea property="comment"
+						 cols="30" rows="10"
+						 placeholder="Please tell us your reasons for giving this score here..."></textarea>
+
+			<h2>
+				Now please tell us the month and the year on which you started using Predective AI
+			</h2>
+			
+			<section property="startDate">
+				<p>
+					I first started to predict cancer risks
+				</p>
+				
+				<select property="month">
+					<option value="">Month</option>
+					<option mv-multiple="monthOption"
+							  mv-value="1 .. 12"
+							  mv-attribute="value"
+							  mv-mode="read">
+						[month('2019-' & digits(2, $this) & '-01', 'shortname')]
+					</option>
+				</select>
+				
+				<select property="year">
+					<option value="">Year</option>
+					<option mv-multiple="yearOption"
+							  mv-value="2010 .. year($today)"
+							  mv-attribute="value"
+							  mv-mode="read">
+						[$this & '']
+					</option>
+				</select>
+			</section>
+			
+			<div class="mv-bar">
+				<button class="mv-save"
+						  disabled="[!month or !year]"
+						  mv-action="add(feedback)">
+					Send Feedback
+				</button>
+			</div>
+		
+	</main>
+</div>
+</form>
+<form method="post">
+	{% csrf_token %}
+
+  <button type="submit" name="next" value="next" class="boton">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Next Case</button>
+
+	</form>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static 'storykey/button_script.js' %}"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mavo/0.2.0/mavo.es5.js'></script>
+</body>
+</html>
