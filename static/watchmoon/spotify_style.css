@@ -1,0 +1,29 @@
+body{
+  background: #111111;
+}
+
+#wrap {
+  width: 900px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 980px) {
+  #wrap {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  #wrap {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #wrap {
+    width: 300px;
+  }
+}
