@@ -1,0 +1,41 @@
+body {
+    background: #0c0c0c;
+}
+.main-container {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#login-form {
+    text-align: center;
+}
+
+#login-img{
+    width:0;
+    height:0;
+    margin-top:6%;
+    margin-bottom:3%;
+    border-radius:40px;
+    color : #0c0c0c;
+    transition: 2s, transform 2s;
+}
+
+.login-input {
+    width:300px;
+    border-radius: 25px;
+    padding:10px;
+    margin-top:10%;
+    opacity:0;
+    transition:1s;
+}
+
+.login-btn{
+    width:150px;
+    margin-top:10%;
+    border-radius:25px;
+    opacity:0;
+    transition:1s;
+}

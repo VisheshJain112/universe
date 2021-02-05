@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PIN input</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,600&amp;display=swap'><link rel="stylesheet" href="{% static 'pin/style.css' %}">
+  <link rel="stylesheet" href="./an_style.css">
+</head>
+
+
+  <body>
+    <h1 class="ml12">UNLOCK WITH THE KEY&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+    <!-- partial:index.partial.html -->
+    <main>
+
+    <form method="POST" action="">
+      {% csrf_token %}
+
+    <div class="pin-wrapper">
+        <div class="digits">
+
+            <input type="text" name="digits" class="focus">
+            <span class="digit" name="digit1"  data-digit=""></span>
+            <span class="digit" name="digit2" data-digit=""></span>
+            <span class="digit" name="digit3" data-digit=""></span>
+            <span class="digit" name="digit4" data-digit=""></span>
+            <div class="caret"></div>
+        </div>
+
+        <button class="submit" type="submit" value="digits">
+            <svg width="113" height="96" viewBox="0 0 113 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M113 48L65.4099 0L55.852 9.55112L87.568 41.2462H0V54.7538H87.568L55.8531 86.4485L65.411 96L113 48Z" />
+            </svg>
+        </button>
+        <div>
+					{% for message in messages %}
+				
+					<p><center><mark>{{message}}</mark></center></p> 
+					{% endfor %}
+				</div>
+      </form>
+        <div class="result">
+            <span>Success! Your code is <span class="result-pin"></span>.</span><br>
+            <button class="reset">Reset</button>
+        </div>
+     
+    </div>
+   
+    
+</main>
+
+
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js'></script><script  src="{% static 'pin/an_script.js' %}"></script>
+  <script src='https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js'></script><script  src="{% static 'pin/script.js' %}"></script>
+
+</body>
+</html>
