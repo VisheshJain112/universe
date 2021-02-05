@@ -1,5 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 def watchmoon(request):
-    return render(request,'watchmoon.html')
+    if request.method == "POST":
+        if request.POST.get("home") is not None:
+                return redirect('/world/homescreen')
+        else:
+            pass
+    else:
+        return render(request,'watchmoon.html')
+def watchsunset(request):
+    if request.method == "POST":
+        if request.POST.get("home") is not None:
+                return redirect('/world/homescreen')
+        else:
+            pass
+    else:
+        return render(request,'watchsunset.html')
+    
+def watchgallery(request):
+    if request.method == "POST":
+        if request.POST.get("home") is not None:
+                return redirect('/world/homescreen')
+        else:
+            pass
+    else:
+        return render(request,'watchgallery.html')

@@ -1,15 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Sunrise over still lake</title>
+  <title>SunRise</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="{% static 'watchsunset/style.css' %}">
+
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="landscape">
+
+
+
+
 
   <div class="mountain"></div>
   <div class="mountain mountain-2"></div>
@@ -54,7 +60,8 @@
     <div class="reed reed-1"></div>
   </div>
 </div>
+
 <!-- partial -->
-  
+
 </body>
 </html>
