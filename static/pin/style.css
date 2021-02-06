@@ -205,7 +205,10 @@ footer a {
   line-height: 1em;
 }
 #logo{ 
+  top: 10%; /* IMPORTANT */
+  left: 45%; /* IMPORTANT */
+  display: block;
+  
 	position:absolute; 
-	top: 50px; 
-	left: 700px; 
+
 } 
