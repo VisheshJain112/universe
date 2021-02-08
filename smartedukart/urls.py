@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('accounts.urls')),
     path('world/',include('world.urls')),
-    path('activity/', include('activity.urls'))
+    path('activity/', include('activity.urls')),
+    path('openbook/', include('openbook.urls'))
     
     
 ]
