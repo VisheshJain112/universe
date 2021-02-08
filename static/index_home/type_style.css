@@ -21,7 +21,7 @@ span {
 }
 #logo{ 
   top: 10%; /* IMPORTANT */
-  left: 45%; /* IMPORTANT */
+  left: 50%; /* IMPORTANT */
   display: block;
   
 	position:absolute; 

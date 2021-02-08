@@ -9,5 +9,6 @@ urlpatterns = [
     path('playbedroom', views.playbedroom, name="playbedroom"),
     path('readletters', views.readletters, name="readletters"),
     path('playmusic', views.playmusic, name="playmusic"),
+    path('timeline', views.timeline, name="timeline"),
 
 ]

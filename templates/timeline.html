@@ -1,36 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - timeline</title>
+  <title>Timeline</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="{% static 'timeline/style.css' %}">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="timeline-container" id="timeline-1">
   <div class="timeline-header">
-    <h2 class="timeline-header__title">Mustafa Kemal Atatürk</h2>
-    <h3 class="timeline-header__subtitle">FATHER OF THE TURKS</h3>
+    <h2 class="timeline-header__title">Memories of Love</h2>
+    <h3 class="timeline-header__subtitle">- PAPPU & VIVI WORLD -</h3>
   </div>
   <div class="timeline">
-    <div class="timeline-item" data-text="FATHER OF THE TURKS">
-      <div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg"/>
-        <h2 class="timeline__content-title">1881</h2>
-        <p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+    <div class="timeline-item" data-text="The First Restaurant Outing">
+      <div class="timeline__content"><img class="timeline__img" src="https://lh3.googleusercontent.com/kX_xrjXYjc0uPZt7DxNqOBr4Pgjq7aNe4PHZhTZmdyAoWhzNevAusr4x9X_LxUw-Euw6Z8jGM5hdxJqjM2YDCSB35bNRg1YZojcoHyRFHInO4L6iI6n6kh0fnbPpP6z5Lp7KjlGwnw=w2400"/>
+        <h2 class="timeline__content-title">27th November 2019</h2>
+        <p class="timeline__content-desc">Met with her first time at Squash Court on 14th, Little did I know that moment was enormous blessing of universe, at the start we were little shy to talk and then there was no stop, hours and hours, morning-nights everything started to become a known part of us, and then fast forward to 27th November we went to our first outing   </p>
       </div>
     </div>
-    <div class="timeline-item" data-text="FATHER OF THE TURKS">
-      <div class="timeline__content"><img class="timeline__img" src="http://gazetemanifesto.com/wp-content/uploads/2015/11/mustafa-kemal.jpg"/>
-        <h2 class="timeline__content-title">1893</h2>
-        <p class="timeline__content-desc">First enrolled in a traditionalreligious school, he soon switched to a modern school. In 1893, he entered a military highschool where his mathematics teacher gave him the second name Kemal (meaning perfection)in recognition of young Mustafa's superior achievement.</p>
+    <div class="timeline-item" data-text="The First Proposal">
+      <div class="timeline__content"><img class="timeline__img" src="https://lh3.googleusercontent.com/QG_G0cGS15AGkx9yemaQIuKMx4okkWINETFMH4cMtOxcWdoJQjyiWdGr9_CxJlN1UY6Qz6F0vcKkNGd7ClEC6YE4ittKPn3jrOAxjQRNzRibbZL8sujp6G9F0eeqRe3HobLxn_es1g=w2400"/>
+        <h2 class="timeline__content-title">30th November 2019</h2>
+        <p class="timeline__content-desc">The most blushable moment in my life, I couldn't imagine me being more happy than it ever before in my life, To be honest I was just looking in her eyes and blushing.</p>
       </div>
     </div>
-    <div class="timeline-item" data-text="FATHER OF THE TURKS">
-      <div class="timeline__content"><img class="timeline__img" src="http://www.volpeypir.com/upload/3732.jpg"/>
-        <h2 class="timeline__content-title">1905</h2>
-        <p class="timeline__content-desc">In 1905, Mustafa Kemal graduated from the War Academy in Istanbul with the rank of Staff Captain. Posted in Damascus, he started with several colleagues, a clandestinesociety called "Homeland and Freedom" to fight against the Sultan'sdespotism.</p>
+    <div class="timeline-item" data-text="The 112">
+      <div class="timeline__content"><img class="timeline__img" src="https://lh3.googleusercontent.com/UJqFKaZ0TMvcuVdDb9nafOb__358A0uDfitIEO70SeAA5GuXvAJ_ZNmGIFjmWFlKgZGPe0uUJ9BiunB2kJY-fKzHRMEbSRS_MLhEMy6HT3NfHvXMI21Jnmf_XiQQDy802BxpPP4OZA=w2400"/>
+        <h2 class="timeline__content-title">1st December 2019</h2>
+        <p class="timeline__content-desc">Finally the reason why 112. yes 1st of December, this day, is something the most important day in both of our life, We went to Guradwara Together on this day</p>
       </div>
     </div>
     <div class="timeline-item" data-text="FATHER OF THE TURKS">
@@ -95,9 +96,9 @@
     </div>
   </div>
 </div>
-<div class="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank">Source/Kaynak</a></div>
+
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="{% static 'timeline/script.js' %}"></script>
 
 </body>
 </html>
